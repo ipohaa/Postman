@@ -1,13 +1,13 @@
 ### Домашнее задание #3 Postman
 Ссылка на коллекцию [Link>>]()
-+ [Итерируемый запрос внутри Postman](https://github.com/ipohaa/Postman1/tree/main#написать-скрипт-отсылающий-запрос-на-сервер-каждую-итерацию)
-+ [Запрос #1](https://github.com/ipohaa/Postman1/tree/main#запрос-1)
-+ [Запрос #2](https://github.com/ipohaa/Postman1/tree/main#запрос-2)
-+ [Запрос #3](https://github.com/ipohaa/Postman1/tree/main#запрос-3)
-+ [Запрос #4](https://github.com/ipohaa/Postman1/tree/main#запрос-4)
-+ [Запрос #5](https://github.com/ipohaa/Postman1/tree/main#запрос-5)
-+ [Запрос #6](https://github.com/ipohaa/Postman1/tree/main#запрос-6)
-+ [Запрос #7](https://github.com/ipohaa/Postman1/tree/main#запрос-7)
++ [Итерируемый запрос внутри Postman](https://github.com/ipohaa/postman/tree/main#написать-скрипт-отсылающий-запрос-на-сервер-каждую-итерацию)
++ [Запрос #1](https://github.com/ipohaa/postman/tree/main#запрос-1)
++ [Запрос #2](https://github.com/ipohaa/postman/tree/main#запрос-2)
++ [Запрос #3](https://github.com/ipohaa/postman/tree/main#запрос-3)
++ [Запрос #4](https://github.com/ipohaa/postman/tree/main#запрос-4)
++ [Запрос #5](https://github.com/ipohaa/postman/tree/main#запрос-5)
++ [Запрос #6](https://github.com/ipohaa/postman/tree/main#запрос-6)
++ [Запрос #7](https://github.com/ipohaa/postman/tree/main#запрос-7)
 
 ### Написать скрипт отсылающий запрос на сервер каждую итерацию
 ### Тесты

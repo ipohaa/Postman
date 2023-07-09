@@ -7,7 +7,7 @@
 + [Запрос #4](https://github.com/ipohaa/Postman1/tree/main#запрос-4)
 + [Запрос #5](https://github.com/ipohaa/Postman1/tree/main#запрос-5)
 + [Запрос #6](https://github.com/ipohaa/Postman1/tree/main#запрос-6)
-+ [Запрос #7](https://github.com/ipohaa/Postman1/tree/main#запрос-7)
++ [Запрос #7](https://github.com/ipohaa/Postman1/tree/main#запрос-7-1)
 
 ### Написать скрипт отсылающий запрос на сервер каждую итерацию
 ### Тесты

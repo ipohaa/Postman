@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "1b91e034-5069-48e0-a9f1-baea693d1a96",
+		"name": "Postman requests #HW2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20370522",
+		"_collection_link": "https://winter-spaceship-165768.postman.co/workspace/Course~ca56ed14-d793-436f-9dd7-6e3d8ec7de65/collection/20370522-1b91e034-5069-48e0-a9f1-baea693d1a96?action=share&creator=20370522&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "1. /first",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"This is the first responce from server!\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{adress}}/first",
+					"host": [
+						"{{adress}}"
+					],
+					"path": [
+						"first"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. /user_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let responseData = pm.response.json(); // парсинг ответа\r",
+							"\r",
+							"pm.test(\"2. Статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"4. Проверка имени response/request \", function(){\r",
+							"    pm.expect(responseData.name).to.eql(\"Nikita\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"5. Проверка возраста response/request \", function(){\r",
+							"    pm.expect(+responseData.age).to.eql(19);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"6. Проверка зарплаты response/request \", function(){\r",
+							"    pm.expect(+responseData.salary).to.eql(400);\r",
+							"});\r",
+							"\r",
+							"let requestData = request.data; // парсинг запроса\r",
+							"\r",
+							"pm.test(\"8. Проверка имени response/request \", function(){\r",
+							"    pm.expect(responseData.name).to.eql(requestData.name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"9. Проверка возраста response/request \", function(){\r",
+							"    pm.expect(responseData.age).to.eql(requestData.age);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"10. Проверка зарплаты response/request \", function(){\r",
+							"    pm.expect(responseData.salary).to.eql(+requestData.salary);\r",
+							"});\r",
+							"\r",
+							"console.log(responseData.family)\r",
+							"\r",
+							"pm.test(\"12. Проверка умножения\", function(){\r",
+							"    pm.expect(responseData.family.u_salary_1_5_year).to.eql(requestData.salary*4);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nikita",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "400",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{adress}}/user_info_3",
+					"host": [
+						"{{adress}}"
+					],
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. /object_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"2. Статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let responseData = pm.response.json(); // парсинг ответа\r",
+							"let requestData = pm.request.url.query.toObject(); // парсинг GET запроса\r",
+							"\r",
+							"pm.test(\"5. Проверка имени response/request \", function(){\r",
+							"    pm.expect(responseData.name).to.eql(requestData.name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"6. Проверка возраста response/request \", function(){\r",
+							"    pm.expect(responseData.age).to.eql(requestData.age);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"7. Проверка возраста response/request \", function(){\r",
+							"    pm.expect(responseData.salary).to.eql(+requestData.salary);\r",
+							"});\r",
+							"\r",
+							"console.log(responseData.family)\r",
+							"\r",
+							"pm.test(\"9. Проверка что параметр dog имеет параметр name \", function(){\r",
+							"    pm.expect(responseData.family.pets.dog).to.have.property(\"name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"10. Проверка что параметр dog имеет параметр age \", function(){\r",
+							"    pm.expect(responseData.family.pets.dog).to.have.property(\"age\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"11. Проверка что параметр dog.name имеет параметр Luky \", function(){\r",
+							"    pm.expect(responseData.family.pets.dog.name).to.eql(\"Luky\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"12. Проверка что параметр dog.age имеет параметр 4\", function(){\r",
+							"    pm.expect(responseData.family.pets.dog.age).to.eql(4);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{adress}}/object_info_3?name=Nikita&age=19&salary=400",
+					"host": [
+						"{{adress}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "19"
+						},
+						{
+							"key": "salary",
+							"value": "400"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. /object_info_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"2. Статус код 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let responseData = pm.response.json(); // парсинг ответа\r",
+							"let requestData = pm.request.url.query.toObject(); // парсинг GET запроса\r",
+							"\r",
+							"pm.test(\"5. Проверка имени response/request \", function(){\r",
+							"    pm.expect(responseData.name).to.eql(requestData.name);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"6. Проверка возраста response/request \", function(){\r",
+							"    pm.expect(responseData.age).to.eql(+requestData.age);\r",
+							"});\r",
+							"\r",
+							"console.log(\"requestData.salary \",requestData.salary);\r",
+							"console.log(\"responseData.salary \",responseData.salary);\r",
+							"console.log(\"0 параметр responseData.salary[0]\",responseData.salary[0]);\r",
+							"console.log(\"1 параметр responseData.salary[1]\",responseData.salary[1]);\r",
+							"console.log(\"2 параметр responseData.salary[2]\",responseData.salary[2]);\r",
+							"\r",
+							"pm.test(\"12. Проверка зарплаты response/request \", function(){\r",
+							"    pm.expect(responseData.salary[0]).to.eql(+requestData.salary);\r",
+							"});\r",
+							"pm.test(\"13. Проверка зарплаты response/request \", function(){\r",
+							"    pm.expect(+responseData.salary[1]).to.eql(requestData.salary*2);\r",
+							"});\r",
+							"pm.test(\"14. Проверка зарплаты response/request \", function(){\r",
+							"    pm.expect(+responseData.salary[2]).to.eql(requestData.salary*3);\r",
+							"});\r",
+							"\r",
+							"pm.environment.set(\"name\", requestData.name)\r",
+							"pm.environment.set(\"age\", requestData.age)\r",
+							"pm.environment.set(\"salary\", requestData.salary)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{adress}}/object_info_4?name=Nikita&age=19&salary=400",
+					"host": [
+						"{{adress}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Nikita"
+						},
+						{
+							"key": "age",
+							"value": "19"
+						},
+						{
+							"key": "salary",
+							"value": "400"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. /user_info_2",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

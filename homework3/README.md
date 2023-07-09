@@ -1,5 +1,5 @@
 ### Домашнее задание #3 Postman
-Ссылка на коллекцию [Link>>]()
+Ссылка на коллекцию [Link>>](https://github.com/ipohaa/postman/blob/main/homework3/Postman_HW3.postman_collection.json)
 + [Итерируемый запрос внутри Postman](https://github.com/ipohaa/postman/tree/main#написать-скрипт-отсылающий-запрос-на-сервер-каждую-итерацию)
 + [Запрос #1](https://github.com/ipohaa/postman/tree/main#запрос-1)
 + [Запрос #2](https://github.com/ipohaa/postman/tree/main#запрос-2)

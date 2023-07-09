@@ -1,11 +1,11 @@
 ### Домашнее задание #1 Postman
-+ [Запрос #1](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-1)
-+ [Запрос #2](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-2)
-+ [Запрос #3](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-3-1)
-+ [Запрос #4](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-4-1)
-+ [Запрос #5](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-5-1)
-+ [Запрос #6](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-6-1)
-+ [Запрос #7](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-7-1)
++ [Запрос #1](https://github.com/ipohaa/postman/tree/main/homework1#запрос-1)
++ [Запрос #2](https://github.com/ipohaa/postman/tree/main/homework1#запрос-2)
++ [Запрос #3](https://github.com/ipohaa/postman/tree/main/homework1#запрос-3-1)
++ [Запрос #4](https://github.com/ipohaa/postman/tree/main/homework1#запрос-4-1)
++ [Запрос #5](https://github.com/ipohaa/postman/tree/main/homework1#запрос-5-1)
++ [Запрос #6](https://github.com/ipohaa/postman/tree/main/homework1#запрос-6-1)
++ [Запрос #7](https://github.com/ipohaa/postman/tree/main/homework1#запрос-7-1)
 
 ## Запрос #1
 ### Запрос

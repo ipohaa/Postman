@@ -1,9 +1,9 @@
 ### Домашнее задание #2 Postman
-+ [Запрос #1](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-1)
-+ [Запрос #2](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-2)
-+ [Запрос #3](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-3)
-+ [Запрос #4](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-4)
-+ [Запрос #5](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-5)
++ [Запрос #1](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-1-1)
++ [Запрос #2](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-2-1)
++ [Запрос #3](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-3-1)
++ [Запрос #4](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-4-1)
++ [Запрос #5](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-5-1)
 
 ### Запрос #1
 ### Запрос

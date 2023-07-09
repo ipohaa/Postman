@@ -1,5 +1,5 @@
 ## Домашнее задание #1 / postman/[homework1](https://github.com/ipohaa/Postman1/tree/main/homework1)
-Ссылка на коллекцию [Link>>]()
+Ссылка на коллекцию [Link>>](https://github.com/ipohaa/Postman1/blob/main/homework1/Postman_HW1.postman_collection.json)
 + [Запрос #1](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-1)
 + [Запрос #2](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-2)
 + [Запрос #3](https://github.com/ipohaa/Postman1/tree/main/homework1#запрос-3-1)
@@ -10,7 +10,7 @@
 
 
 ## Домашнее задание #2 / postman/[homework2](https://github.com/ipohaa/Postman1/tree/main/homework2)
-Ссылка на коллекцию [Link>>]()
+Ссылка на коллекцию [Link>>](https://github.com/ipohaa/Postman1/blob/main/homework2/Postman_HW2.postman_collection.json)
 + [Запрос #1](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-1-1)
 + [Запрос #2](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-2)
 + [Запрос #3](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-3-1)
@@ -18,7 +18,7 @@
 + [Запрос #5](https://github.com/ipohaa/Postman1/tree/main/homework2#запрос-5-1)
 
 ## Домашнее задание #3 / postman/[homework3](https://github.com/ipohaa/Postman1/tree/main/homework3)
-Ссылка на коллекцию [Link>>]()
+Ссылка на коллекцию [Link>>](https://github.com/ipohaa/Postman1/blob/main/homework3/Postman_HW3.postman_collection.json)
 + [Итерируемый запрос внутри Postman](https://github.com/ipohaa/Postman1/tree/main#написать-скрипт-отсылающий-запрос-на-сервер-каждую-итерацию)
 + [Запрос #1](https://github.com/ipohaa/Postman1/tree/main#запрос-1)
 + [Запрос #2](https://github.com/ipohaa/Postman1/tree/main#запрос-2)

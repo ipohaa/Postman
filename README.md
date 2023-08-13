@@ -49,24 +49,24 @@
 7. Переход к следующей итерации
 ### Код
 ```js
-let responseData = pm.response.json(); //Парсинг ответа
-let iterator = +pm.environment.get("iterator") //Берём элемент для цикла из окружения
+let responseData = pm.response.json(); 
+let iterator = +pm.environment.get("iterator") 
 //console.clear()
 
-if (iterator <= 118){ // если итератор в границах списка делать
-    if(pm.response.code === 200){ // если статус код равен 200, то печатаем текущий номер валюты, абревиатуру и текущий курс
+if (iterator <= 118){ 
+    if(pm.response.code === 200){ 
         console.log(`Валюта номер ${iterator} -> ${responseData.Cur_Abbreviation}`) 
         console.log(`Курс ${responseData.Cur_Abbreviation} = ${responseData.Cur_OfficialRate}`)
-        if(responseData.Cur_OfficialRate > 0){ // если поле есть то выводим полную информацию ответа
+        if(responseData.Cur_OfficialRate){ 
             console.log('Полная информация ', responseData)
         }
-        iterator++ // увеличиваем итератор 
-        pm.environment.set("iterator", iterator) // передаём текущее значение итератора
+        iterator++ 
+        pm.environment.set("iterator", iterator)
     } 
-    else if (pm.response.code === 500){ // если статус код равен 500, то пропускаем текущий запрос
-        iterator++ // увеличиваем итератор 
-        pm.environment.set("iterator", iterator) // передаём текущее значение итератора
-        console.log('От этого запроса сервак вмер') // консольное сообщение об ошибке
+    else if (pm.response.code === 500){ 
+        iterator++ 
+        pm.environment.set("iterator", iterator) 
+        console.log('От этого запроса сервак вмер')
     }
     if (iterator > 118){ // проверка конца списка, если итератор за границами массива, то обнуляем его
         pm.environment.set("iterator", 0);

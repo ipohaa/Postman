@@ -28,7 +28,8 @@
 }
 ```
 7. Переход к следующей итерации
-### Код
+### Метод #1
+Работает из меню `Run collection`, где `Iterations` задаёт количество элементов в консоли.
 ```js
 let responseData = pm.response.json(); //Парсинг ответа
 let iterator = +pm.environment.get("iterator") //Берём элемент для цикла из окружения
@@ -53,7 +54,42 @@ if (iterator <= 118){ // если итератор в границах спис�
         pm.environment.set("iterator", 0);
     }
 }
-
+```
+### Метод #2
+Метод пробегает весь респонс и отправляет новый реквест на каждой итерации до конца списка.
+```js
+let responseData = pm.response.json();
+let token = pm.environment.get('auth_token');
+for (let i=0; i < responseData.length; i++){
+    cur_id = responseData[i].Cur_ID;
+    const postRequest = {
+        url: 'http://54.157.99.22:80/curr_byn',
+        method: 'POST',
+        header: {
+            'Content-Type': 'application/json',
+        },
+        body: {
+            mode: 'formdata',
+            formdata: [
+                {key: 'auth_token', value: token},
+                {key: 'curr_code', value: `${cur_id}` }
+            ]
+        }
+    };
+    pm.sendRequest(postRequest, (err, response) => {
+            if  (pm.response.code === 200){ 
+                let postResponse = response.json()
+                if (postResponse.Cur_OfficialRate){
+                    console.log('Полная информация ', postResponse)
+                }
+            } 
+            if (pm.response.code === 500){
+                console.log('Ошибка 500, сервер вмер')
+                return
+            } 
+        }
+    )   
+}
 ```
 ## Запрос #1
 ### Запрос
